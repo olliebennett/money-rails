@@ -7,6 +7,12 @@ describe 'MoneyRails::ActionViewExtension' do
     it { should include Money.default_currency.symbol }
   end
 
+  describe '#currency_symbol_raw' do
+    subject { helper.currency_symbol_raw }
+    it { should be_a String }
+    it { should equal Money.default_currency.symbol }
+  end
+
   describe '#humanized_money' do
     let(:options) { {} }
     subject { helper.humanized_money Money.new(12500), options }
