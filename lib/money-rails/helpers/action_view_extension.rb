@@ -5,6 +5,10 @@ module MoneyRails
       content_tag(:span, Money.default_currency.symbol, :class => "currency_symbol")
     end
 
+    def currency_symbol_raw
+      Money.default_currency.symbol
+    end
+
     def humanized_money(value, options={})
       if !options || !options.is_a?(Hash)
         warn "humanized_money now takes a hash of formatting options, please specify { :symbol => true }"
