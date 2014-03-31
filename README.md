@@ -415,7 +415,7 @@ end
 ```
 <%= currency_symbol %>
 ```
-This will render a `span` dom element with the default currency symbol.
+This will render a `span` dom element with the default currency symbol. Alternatively, `currency_symbol_raw` renders without the surrounding `span` tag.
 
 * the `humanized_money` helper method
 
